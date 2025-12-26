@@ -52,6 +52,11 @@ void Quaternion_setIdentity(Quaternion* q);
 void Quaternion_copy(Quaternion* q, Quaternion* output);
 
 /**
+ * Adds one quaternion to another
+ */
+void Quaternion_add(Quaternion *q1, Quaternion *q2, Quaternion *output);
+
+/**
  * Tests if all quaternion values are equal (using QUATERNION_EPS).
  */
 bool Quaternion_equal(Quaternion* q1, Quaternion* q2);

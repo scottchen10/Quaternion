@@ -41,6 +41,15 @@ void Quaternion_setIdentity(Quaternion* q)
     Quaternion_set(1, 0, 0, 0, q);
 }
 
+void Quaternion_add(Quaternion *q1, Quaternion *q2, Quaternion *output)
+{
+    output->w = q1->w + q2->w;
+    for (int i = 0; i < 3; i++) 
+    {
+        output->v[i] = q1->v[i] + q2->v[i];
+    }
+};
+
 void Quaternion_copy(Quaternion* q, Quaternion* output)
 {
     Quaternion_set(q->w, q->v[0], q->v[1], q->v[2], output);
